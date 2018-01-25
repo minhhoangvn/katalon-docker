@@ -1,0 +1,10 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Non-GUI,,,2018-01-25 13:38:17,2018-01-25 13:38:18,1.051s,FAILED
+,,,,,,
+Test Cases/TC_01,,,2018-01-25 13:38:17,2018-01-25 13:38:18,0.460s,PASSED
+"Statement - println(""This is sample test to run in docker"")",,,2018-01-25 13:38:18,2018-01-25 13:38:18,0.005s,PASSED
+verifyEqual,,,2018-01-25 13:38:18,2018-01-25 13:38:18,0.061s,PASSED
+,,,,,,
+Test Cases/TC_02,,,2018-01-25 13:38:18,2018-01-25 13:38:18,0.204s,FAILED
+"Statement - println(""This is sample test to run in docker"")",,,2018-01-25 13:38:18,2018-01-25 13:38:18,0.001s,PASSED
+verifyEqual,,,2018-01-25 13:38:18,2018-01-25 13:38:18,0.003s,FAILED

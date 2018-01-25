@@ -1,0 +1,6 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+GUI,,,2018-01-22 09:53:16,2018-01-22 09:53:17,1.717s,INCOMPLETE
+,,,,,,
+Test Cases/TC_03,,,2018-01-22 09:53:16,2018-01-22 09:53:17,1.232s,INCOMPLETE
+"Statement - println(""This is sample test to run in docker"")",,,2018-01-22 09:53:17,2018-01-22 09:53:17,0.005s,PASSED
+openBrowser,,,2018-01-22 09:53:17,2018-01-22 09:53:17,0.558s,INCOMPLETE

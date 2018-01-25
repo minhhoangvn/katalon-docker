@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Non-GUI" time="0" tests="1" failures="1" errors="0">
+   <testsuite name="Non-GUI" tests="1" failures="1" errors="0" time="0" timestamp="2018-01-22 10:28:02" hostname="minhhoang - 192.168.10.100" id="Test Suites/Non-GUI">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="/Users/minhhoang/Workspace/WorkSpace/Docker/Katalon-Container/TestSample/Reports/Non-GUI/20180122_102759"/>
+         <property name="logFiles" value="/Users/minhhoang/Workspace/WorkSpace/Docker/Katalon-Container/TestSample/Reports/Non-GUI/20180122_102759/execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="minhhoang - 192.168.10.100"/>
+         <property name="hostAddress" value="192.168.10.100"/>
+         <property name="os" value="Mac OS X 64bit"/>
+         <property name="katalonVersion" value="5.2.0.1"/>
+      </properties>
+      <testcase name="Test Cases/TC_01" classname="Test Cases/TC_01" status="PASSED">
+         <system-out><![CDATA[2018-01-22 10:28:02 - [TEST_CASE][PASSED] - Test Cases/TC_01: Test Cases/TC_01
+
+2018-01-22 10:28:03 - [TEST_STEP][PASSED] - Statement - println("This is sample test to run in docker"): null
+
+2018-01-22 10:28:03 - [TEST_STEP][PASSED] - verifyEqual: Actual object '1' and expected object '1' are equal
+
+2018-01-22 10:28:03 - [MESSAGE][PASSED] - Actual object '1' and expected object '1' are equal]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/TC_02" classname="Test Cases/TC_02" status="FAILED">
+         <failure type="FAILED" message="Unable to verify equal between actual object '1' and expected object '2' (Root cause: Actual object '1' and expected object '2' are not equal)"/>
+         <system-out><![CDATA[2018-01-22 10:28:03 - [TEST_CASE][FAILED] - Test Cases/TC_02: Test Cases/TC_02 FAILED because (of) Unable to verify equal between actual object '1' and expected object '2' (Root cause: Actual object '1' and expected object '2' are not equal)
+
+2018-01-22 10:28:03 - [TEST_STEP][PASSED] - Statement - println("This is sample test to run in docker"): null
+
+2018-01-22 10:28:03 - [TEST_STEP][FAILED] - verifyEqual: Unable to verify equal between actual object '1' and expected object '2' (Root cause: Actual object '1' and expected object '2' are not equal)
+
+2018-01-22 10:28:03 - [MESSAGE][FAILED] - Unable to verify equal between actual object '1' and expected object '2' (Root cause: Actual object '1' and expected object '2' are not equal)]]></system-out>
+         <system-err><![CDATA[2018-01-22 10:28:03 - [TEST_CASE][FAILED] - Test Cases/TC_02: Test Cases/TC_02 FAILED because (of) Unable to verify equal between actual object '1' and expected object '2' (Root cause: Actual object '1' and expected object '2' are not equal)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2018-01-22 10:28:02 - [TEST_SUITE][FAILED] - Non-GUI: Test Cases/TC_02 FAILED because (of) Unable to verify equal between actual object '1' and expected object '2' (Root cause: Actual object '1' and expected object '2' are not equal)]]></system-out>
+      <system-err><![CDATA[2018-01-22 10:28:02 - [TEST_SUITE][FAILED] - Non-GUI: Test Cases/TC_02 FAILED because (of) Unable to verify equal between actual object '1' and expected object '2' (Root cause: Actual object '1' and expected object '2' are not equal)]]></system-err>
+   </testsuite>
+</testsuites>

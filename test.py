@@ -1,0 +1,15 @@
+from selenium import webdriver
+
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--no-sandbox')
+b = webdriver.Chrome(chrome_options=chrome_options)
+b.get("https://stackoverflow.com/questions/43008622/python-linux-selenium-chrome-not-reachable")
+print("Test with chrome browser")
+print(b.title)
+b.quit()
+print("=====================")
+b = webdriver.Firefox()
+b.get("https://github.com/katalon-studio/katalon-studio-docker")
+print("Test with firefox browser")
+print(b.title)
+b.quit()

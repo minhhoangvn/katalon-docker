@@ -1,0 +1,1 @@
+katalon -runMode=console -consoleLog -projectPath="/Users/minhhoang/Workspace/WorkSpace/Docker/Katalon-Container/TestSample/TestSample.prj" -testSuitePath=Test\ Suites/Non-GUI -browserType=Chrome -reportFolder=TestResult

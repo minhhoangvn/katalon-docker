@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="GUI" time="1" tests="0" failures="0" errors="0">
+   <testsuite name="GUI" tests="0" failures="0" errors="0" time="1" timestamp="2018-01-22 09:53:16" hostname="minhhoang - 192.168.10.100" id="Test Suites/GUI">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="/Users/minhhoang/Workspace/WorkSpace/Docker/Katalon-Container/Sample Katalon/TestSample/Reports/GUI/20180122_095313"/>
+         <property name="logFiles" value="/Users/minhhoang/Workspace/WorkSpace/Docker/Katalon-Container/Sample Katalon/TestSample/Reports/GUI/20180122_095313/execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="minhhoang - 192.168.10.100"/>
+         <property name="hostAddress" value="192.168.10.100"/>
+         <property name="os" value="Mac OS X 64bit"/>
+         <property name="katalonVersion" value="5.2.0.1"/>
+      </properties>
+      <testcase name="Test Cases/TC_03" classname="Test Cases/TC_03" status="INCOMPLETE">
+         <system-out><![CDATA[2018-01-22 09:53:16 - [TEST_CASE][INCOMPLETE] - Test Cases/TC_03: null
+
+2018-01-22 09:53:17 - [TEST_STEP][PASSED] - Statement - println("This is sample test to run in docker"): null
+
+2018-01-22 09:53:17 - [TEST_STEP][INCOMPLETE] - openBrowser: Opening browser]]></system-out>
+         <system-err><![CDATA[2018-01-22 09:53:16 - [TEST_CASE][INCOMPLETE] - Test Cases/TC_03: null]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2018-01-22 09:53:16 - [TEST_SUITE][INCOMPLETE] - GUI: null]]></system-out>
+      <system-err><![CDATA[2018-01-22 09:53:16 - [TEST_SUITE][INCOMPLETE] - GUI: null]]></system-err>
+   </testsuite>
+</testsuites>

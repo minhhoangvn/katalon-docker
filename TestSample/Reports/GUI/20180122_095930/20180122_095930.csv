@@ -1,0 +1,10 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+GUI,Safari 11,,2018-01-22 09:59:32,2018-01-22 10:00:03,30.497s,PASSED
+,,,,,,
+Test Cases/TC_03,Safari 11,,2018-01-22 09:59:32,2018-01-22 10:00:03,30.203s,PASSED
+"Statement - println(""This is sample test to run in docker"")",Safari 11,,2018-01-22 09:59:33,2018-01-22 09:59:33,0.003s,PASSED
+openBrowser,Safari 11,,2018-01-22 09:59:33,2018-01-22 09:59:52,19.172s,PASSED
+navigateToUrl,Safari 11,,2018-01-22 09:59:52,2018-01-22 10:00:02,10.383s,PASSED
+Statement - title = com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.getWindowTitle(),Safari 11,,2018-01-22 10:00:02,2018-01-22 10:00:02,0.052s,PASSED
+"Statement - println(""Page title is "" + title)",Safari 11,,2018-01-22 10:00:02,2018-01-22 10:00:02,0.001s,PASSED
+closeBrowser,Safari 11,,2018-01-22 10:00:02,2018-01-22 10:00:03,0.117s,PASSED

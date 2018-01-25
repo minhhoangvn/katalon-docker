@@ -1,0 +1,53 @@
+service xvfb-service start
+
+PROJECT_PATH_PARAM=""
+if [ ! -z "$PROJECCT_PATH" ]; then
+  echo "PROJECCT_PATH variable is set, appending -projectPath"
+  PROJECT_PATH_PARAM="-projectPath=$PROJECCT_PATH"
+else
+  echo "Missing param for project path, please input project path parameter with -e PROJECCT_PATH=\"your path value\""
+  exit 1
+fi
+
+TEST_SUITES_PARAM=""
+if [ ! -z "$TEST_SUITES" ]; then
+  echo "TEST_SUITES variable is set, appending -testSuitePath"
+  TEST_SUITES_PARAM="-testSuitePath=$TEST_SUITES"
+else
+  echo "Missing param for test suites path, please input test suites path parameter with -e TEST_SUITES=\"your relative path value\""
+  exit 1
+fi
+
+REPORT_PATH_PARAM=""
+if [ ! -z "$REPORT_PATH" ]; then
+  echo "TEST_SUITES variable is set, appending -reportFolder"
+  REPORT_PATH_PARAM="-reportFolder=$REPORT_PATH"
+else
+  REPORT_PATH_PARAM="-reportFolder=TestResult"
+fi
+
+BROWSER_TYPE_PARAM=""
+if [ ! -z "$BROWSER_TYPE" ]; then
+  echo "BROWSER_TYPE variable is set, appending -browserType"
+  BROWSER_TYPE_PARAM="-browserType=$BROWSER_TYPE"
+else
+  echo "Default browser is select with Firefox."
+  BROWSER_TYPE_PARAM="-browserType=firefox"
+fi
+
+CONSOLE_LOG_PARAM=""
+if [ ! -z "$CONSOLE_LOG_ENABLE" ]; then
+  echo "CONSOLE_LOG variable is set, appending -consoleLog"
+  CONSOLE_LOG_PARAM="-consoleLog"
+fi
+
+echo "============ Checking Parameters Input =============="
+echo ${PROJECCT_PATH_PARAM}
+echo ${TEST_SUITES_PARAM}
+echo ${BROWSER_TYPE_PARAM}
+echo ${REPORT_PATH_PARAM}
+echo ${CONSOLE_LOG_PARAM}
+echo "======================================================"
+
+
+./katalon -runMode=console ${PROJECCT_PATH_PARAM} ${TEST_SUITES_PARAM} ${REPORT_PATH_PARAM} ${BROWSER_TYPE_PARAM} ${CONSOLE_LOG_PARAM}

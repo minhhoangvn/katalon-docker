@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="GUI" time="20" tests="1" failures="0" errors="0">
+   <testsuite name="GUI" tests="1" failures="0" errors="0" time="20" timestamp="2018-01-22 10:00:35" hostname="minhhoang - 192.168.10.100" id="Test Suites/GUI">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="/Users/minhhoang/Workspace/WorkSpace/Docker/Katalon-Container/Sample Katalon/TestSample/Reports/GUI/20180122_100033"/>
+         <property name="logFiles" value="/Users/minhhoang/Workspace/WorkSpace/Docker/Katalon-Container/Sample Katalon/TestSample/Reports/GUI/20180122_100033/execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="minhhoang - 192.168.10.100"/>
+         <property name="os" value="Mac OS X 64bit"/>
+         <property name="katalonVersion" value="5.2.0.1"/>
+         <property name="browser" value="Safari 11"/>
+         <property name="hostAddress" value="192.168.10.100"/>
+         <property name="sessionId" value="4BFCCA6C-02C5-42AE-A3A7-F79E3A4BA9AE"/>
+         <property name="seleniumVersion" value="3.7.1"/>
+         <property name="proxyInformation" value="ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}"/>
+         <property name="platform" value="Mac OS X"/>
+      </properties>
+      <testcase name="Test Cases/TC_03" classname="Test Cases/TC_03" status="PASSED">
+         <system-out><![CDATA[2018-01-22 10:00:35 - [TEST_CASE][PASSED] - Test Cases/TC_03: Test Cases/TC_03
+
+2018-01-22 10:00:36 - [TEST_STEP][PASSED] - Statement - println("This is sample test to run in docker"): null
+
+2018-01-22 10:00:36 - [TEST_STEP][PASSED] - openBrowser: Browser is opened with url: ''
+
+2018-01-22 10:00:51 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2018-01-22 10:00:51 - [TEST_STEP][PASSED] - navigateToUrl: Navigate to 'https://tinhte.vn/' successfully
+
+2018-01-22 10:00:55 - [MESSAGE][PASSED] - Navigate to 'https://tinhte.vn/' successfully
+
+2018-01-22 10:00:55 - [TEST_STEP][PASSED] - Statement - title = com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.getWindowTitle(): Current window's title is: 'Cộng đồng Khoa học & Công nghệ | Tinhte.vn'
+
+2018-01-22 10:00:55 - [MESSAGE][PASSED] - Current window's title is: 'Cộng đồng Khoa học & Công nghệ | Tinhte.vn'
+
+2018-01-22 10:00:55 - [TEST_STEP][PASSED] - Statement - println("Page title is " + title): null
+
+2018-01-22 10:00:55 - [TEST_STEP][PASSED] - closeBrowser: Browser is closed
+
+2018-01-22 10:00:56 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2018-01-22 10:00:35 - [TEST_SUITE][PASSED] - GUI: Test Cases/TC_03]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

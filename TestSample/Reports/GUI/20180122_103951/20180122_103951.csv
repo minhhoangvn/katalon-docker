@@ -1,0 +1,10 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+GUI,Chrome 63.0.3239.132,,2018-01-22 10:39:55,2018-01-22 10:40:10,14.824s,PASSED
+,,,,,,
+Test Cases/TC_03,Chrome 63.0.3239.132,,2018-01-22 10:39:56,2018-01-22 10:40:10,13.997s,PASSED
+"Statement - println(""This is sample test to run in docker"")",Chrome 63.0.3239.132,,2018-01-22 10:39:57,2018-01-22 10:39:57,0.005s,PASSED
+openBrowser,Chrome 63.0.3239.132,,2018-01-22 10:39:57,2018-01-22 10:40:04,7.336s,PASSED
+navigateToUrl,Chrome 63.0.3239.132,,2018-01-22 10:40:04,2018-01-22 10:40:09,5.155s,PASSED
+Statement - title = com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.getWindowTitle(),Chrome 63.0.3239.132,,2018-01-22 10:40:09,2018-01-22 10:40:10,0.041s,PASSED
+"Statement - println(""Page title is "" + title)",Chrome 63.0.3239.132,,2018-01-22 10:40:10,2018-01-22 10:40:10,0.001s,PASSED
+closeBrowser,Chrome 63.0.3239.132,,2018-01-22 10:40:10,2018-01-22 10:40:10,0.161s,PASSED
