@@ -1,53 +1,63 @@
-service xvfb-service start
+printUsage(){
+echo "Running katalon container. Use environment variables belows to config:" \
+     " \\n -p -- project path value " \
+     " \\n -s -- test suite path value " \
+     " \\n -r -- report path value " \
+     " \\n -b -- browser type value, default is firefox browser " \
+     " \\n -v -- enable console log mode in kataon "
+}
 
-PROJECT_PATH_PARAM=""
-if [ ! -z "$PROJECCT_PATH" ]; then
+PROJECCT_PATH_PARAM=""
+if [ ! -z "$p" ]; then
   echo "PROJECCT_PATH variable is set, appending -projectPath"
-  PROJECT_PATH_PARAM="-projectPath=$PROJECCT_PATH"
+  PROJECCT_PATH_PARAM="-projectPath="$p""
 else
-  echo "Missing param for project path, please input project path parameter with -e PROJECCT_PATH=\"your path value\""
+  printUsage
   exit 1
 fi
 
 TEST_SUITES_PARAM=""
-if [ ! -z "$TEST_SUITES" ]; then
+if [ ! -z "$s" ]; then
   echo "TEST_SUITES variable is set, appending -testSuitePath"
-  TEST_SUITES_PARAM="-testSuitePath=$TEST_SUITES"
+  TEST_SUITES_PARAM="-testSuitePath=$s"
 else
-  echo "Missing param for test suites path, please input test suites path parameter with -e TEST_SUITES=\"your relative path value\""
+  printUsage
   exit 1
 fi
 
 REPORT_PATH_PARAM=""
-if [ ! -z "$REPORT_PATH" ]; then
+if [ ! -z "$r" ]; then
   echo "TEST_SUITES variable is set, appending -reportFolder"
-  REPORT_PATH_PARAM="-reportFolder=$REPORT_PATH"
+  REPORT_PATH_PARAM="-reportFolder=$r"
 else
   REPORT_PATH_PARAM="-reportFolder=TestResult"
 fi
 
 BROWSER_TYPE_PARAM=""
-if [ ! -z "$BROWSER_TYPE" ]; then
+if [ ! -z "$b" ]; then
   echo "BROWSER_TYPE variable is set, appending -browserType"
-  BROWSER_TYPE_PARAM="-browserType=$BROWSER_TYPE"
+  BROWSER_TYPE_PARAM="-browserType=$b"
 else
   echo "Default browser is select with Firefox."
-  BROWSER_TYPE_PARAM="-browserType=firefox"
+  BROWSER_TYPE_PARAM="-browserType=Firefox"
 fi
 
 CONSOLE_LOG_PARAM=""
-if [ ! -z "$CONSOLE_LOG_ENABLE" ]; then
+if [ ! -z "$v" ]; then
   echo "CONSOLE_LOG variable is set, appending -consoleLog"
   CONSOLE_LOG_PARAM="-consoleLog"
 fi
 
-echo "============ Checking Parameters Input =============="
-echo ${PROJECCT_PATH_PARAM}
-echo ${TEST_SUITES_PARAM}
-echo ${BROWSER_TYPE_PARAM}
-echo ${REPORT_PATH_PARAM}
-echo ${CONSOLE_LOG_PARAM}
-echo "======================================================"
+echo "============ Checking Katalon Execute Command  =========================="
+export CMD_RUN="-runMode=console ${PROJECCT_PATH_PARAM} ${TEST_SUITES_PARAM} ${REPORT_PATH_PARAM} ${BROWSER_TYPE_PARAM} ${CONSOLE_LOG_PARAM}"
+echo ${CMD_RUN}
+echo "========================================================================="
 
-
-./katalon -runMode=console ${PROJECCT_PATH_PARAM} ${TEST_SUITES_PARAM} ${REPORT_PATH_PARAM} ${BROWSER_TYPE_PARAM} ${CONSOLE_LOG_PARAM}
+#====================================================================
+# Work arround for variable contains space when execution in katalon
+#====================================================================
+echo "service xvfb-service start" >> testSuitesExecution.sh
+echo "./katalon ${CMD_RUN}" >> testSuitesExecution.sh
+sudo chmod +x /katalon/testSuitesExecution.sh
+sudo /katalon/testSuitesExecution.sh
+sudo rm -rf /katalon/testSuitesExecution.sh

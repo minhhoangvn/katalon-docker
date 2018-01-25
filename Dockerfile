@@ -81,14 +81,6 @@ RUN pip install --upgrade pip
 RUN pip install selenium
 
 #============================
-# Some configuration options
-#============================
-ENV SCREEN_WIDTH 1080
-ENV SCREEN_HEIGHT 1920
-ENV SCREEN_DEPTH 24
-ENV DISPLAY :99
-
-#============================
 ## Chrome
 #============================
 
@@ -216,4 +208,6 @@ COPY wrap_chrome_binary /opt/bin/wrap_chrome_binary
 RUN chmod +x /opt/bin/wrap_chrome_binary \
     && /opt/bin/wrap_chrome_binary
 
-ENTRYPOINT ["/bin/sh", "./entry_point"]
+ENV DISPLAY :99
+
+CMD ["/bin/sh", "./entry_point"]
