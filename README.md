@@ -1,3 +1,11 @@
+Currently Katalon team support official Docker image:
+Please refere to this link https://github.com/katalon-studio/docker-images
+
+
+
+
+
+*** Sample for research only ***
 Katalon-Container:
 - Pull this repository
 - Run command: docker build -t katalon-container . # This will build katalon container
